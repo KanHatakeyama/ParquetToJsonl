@@ -41,7 +41,7 @@ def main(n_records_per_text, max_records_per_jsol, out_dir, column_name, input_p
                 text_list = list(set(cleaned_text_list))
 
         # 書き出し
-        for text in text_list:
+        for text in tqdm(text_list):
             record_count += 1
             if record_count % max_records_per_jsol == 0:
                 out_file_idx += 1
